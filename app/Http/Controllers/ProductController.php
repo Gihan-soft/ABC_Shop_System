@@ -36,7 +36,7 @@ class ProductController extends Controller
     public function create()
     {   
         $categories=Category::get();
-        return view('product.create')->with(compact('categories'));
+        return view('product.create',compact('categories'));
     }
 
     /**
