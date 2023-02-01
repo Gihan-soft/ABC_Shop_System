@@ -90,11 +90,13 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    {   
+       $categories=Category::get();
        $products=Product::find($id);
+
        if($products)
        {
-        return view('product.edit',compact('products'));
+        return view('product.edit',compact(['products','categories']));
        }
        else
        {
