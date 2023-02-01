@@ -62,7 +62,7 @@
                                  <div class="col-lg-12  col-sm-12">  
                                     <label for="">Category</label>                              
                                     <select name="cat_id" class="form-control show-tick">
-                                        @foreach(\App\Models\Category::get() as $category)
+                                        @foreach($categories as $category)
                                            <option value="{{$category->id}}" {{$category->id==$products->cat_id ? 'selected' : ''}}>{{$category->name}}</option>
                                         @endforeach
                                     </select>
